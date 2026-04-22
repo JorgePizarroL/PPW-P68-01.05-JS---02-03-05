@@ -30,10 +30,20 @@ function renderizarLista(datos) {
   });
 }
 
-### Filtrado de elementos
-
+```
+### Eliminacion de los elementos
 ```js
+function eliminarElemento(id) {
+  const index = elementos.findIndex(el => el.id === id);
+  if (index !== -1) {
+    elementos.splice(index, 1);
+    renderizarLista(elementos);
+  }
+}
+```
 
+### Filtrado de elementos
+```js
 function inicializarFiltros() {
   const botones = document.querySelectorAll('.btn-filtro');
 
@@ -55,4 +65,35 @@ function inicializarFiltros() {
       }
     });
   });
+}
+```
+
+### Estilos
+
+```css
+.card {
+  background: #e2e8f0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.btn-eliminar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-filtro-activo {
+  background: #1e3a8a;
+  color: white;
 }
