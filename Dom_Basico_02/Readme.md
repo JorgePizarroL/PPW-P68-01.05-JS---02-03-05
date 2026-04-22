@@ -97,3 +97,17 @@ function inicializarFiltros() {
   background: #1e3a8a;
   color: white;
 }
+
+### Estructura
+Dom_Basico_02/
+│── index2.html
+│
+├── assets/
+│   ├── P2-1.png
+│   └── P2-2.png
+│
+├── CSS/
+│   └── styles.css
+│
+├── JS/
+│   └── app.js
