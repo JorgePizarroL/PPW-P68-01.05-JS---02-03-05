@@ -99,16 +99,20 @@ function inicializarFiltros() {
 }
 ```
 
-### Estructura
+## Estructura
+```
 Dom_Basico_02/
 │── index2.html
 │
 ├── assets/
-│   ├── P2-1.png
-│   └── P2-2.png
+│ ├── P2-1.png
+│ └── P2-2.png
 │
 ├── CSS/
-│   └── styles.css
+│ └── styles.css
 │
 ├── JS/
-│   └── app.js
+│ └── app.js
+│
+└── README.md
+```
