@@ -97,6 +97,7 @@ function inicializarFiltros() {
   background: #1e3a8a;
   color: white;
 }
+```
 
 ### Estructura
 Dom_Basico_02/
