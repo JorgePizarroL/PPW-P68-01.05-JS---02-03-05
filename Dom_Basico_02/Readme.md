@@ -11,7 +11,7 @@ Estilos personalizados con CSS
 
 Se aplican conceptos de manipulación del DOM, eventos y estructuras de datos en JavaScript.
 
-### 🔹 Renderizado de la lista
+### Renderizado de la lista
 
 ```js
 function renderizarLista(datos) {
@@ -30,10 +30,29 @@ function renderizarLista(datos) {
   });
 }
 
-###  Vista general de la aplicación
+### Filtrado de elementos
 
-![Vista general](assets/P2-1.png)
+```js
 
-### Filtrado aplicado
+function inicializarFiltros() {
+  const botones = document.querySelectorAll('.btn-filtro');
 
-![Filtro aplicado](assets/P2-2.png)
+  botones.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+      const categoria = btn.dataset.categoria;
+
+      document.querySelectorAll('.btn-filtro')
+        .forEach(b => b.classList.remove('btn-filtro-activo'));
+
+      btn.classList.add('btn-filtro-activo');
+
+      if (categoria === 'todas') {
+        renderizarLista(elementos);
+      } else {
+        const filtrados = elementos.filter(e => e.categoria === categoria);
+        renderizarLista(filtrados);
+      }
+    });
+  });
+}
