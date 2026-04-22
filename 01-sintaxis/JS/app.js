@@ -16,17 +16,15 @@ const direccion = {
 
 console.table({nombre, apellido, ciclo, activo, direccion});
 
-// const calcularPromedio = (notas) => // promedio; notas.reduce=>sum()
-
 const esMayorEdad = (edad) => edad >= 18;
 
 const getSaludo = (nombre, hora) => {
 
     if (hora < 12)
-        return 'Buenos dias', '{nombre}';
+        return `Buenos dias, ${nombre}`;
     if (hora < 18) 
-        return 'Buenas Tardes', '{nombre}';
-    return 'Buenas noches', '{nombre}';
+        return `Buenas Tardes, ${nombre}`;
+    return `Buenas noches, ${nombre}`;
 
 }
 
@@ -41,6 +39,7 @@ const getSaludo2 = (nombre, hora) => hora < 12
 document.getElementById('nombre').textContent = `${nombre}`;
 document.getElementById('apellido').textContent = `${apellido}`;
 document.getElementById('ciclo').textContent = `${ciclo}`;
+document.getElementById('saludo').textContent = getSaludo(nombre, 10);
 
 //Crear repositorio subirlo
 
